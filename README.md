@@ -1,17 +1,19 @@
-# Task Tracker - AI-Powered Task Management & Productivity Platform
-Comprehensive Task Management Platform with AI-Driven Insights, Progress Analytics, and Smart Scheduling.
+# Task Tracker - Professional Task Management Platform
 
-📖 [Documentation](#) | 🚀 [Quick Start](#installation) | 🎯 [Features](#-features)
+A comprehensive task management application built with modern web technologies, designed to help users efficiently organize, track, and complete their daily tasks with advanced features like real-time search, bulk operations, and data export/import capabilities.
+
+📖 [Documentation](#documentation) | 🚀 [Quick Start](#installation) | 🎯 [Features](#-features) | 💻 [Tech Stack](#-tech-stack)
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=node.js)](https://nodejs.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-5.x-black?logo=express)](https://expressjs.com/)
 [![React](https://img.shields.io/badge/React-19.x-blue?logo=react)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-Latest-purple?logo=vite)](https://vitejs.dev/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)](https://www.mongodb.com/)
-[![Google Generative AI](https://img.shields.io/badge/Google-Gemini-yellow?logo=google)](https://gemini.google.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-blue?logo=tailwindcss)](https://tailwindcss.com/)
 
 ## 📋 Table of Contents
+
 - [Overview](#-overview)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
@@ -19,336 +21,530 @@ Comprehensive Task Management Platform with AI-Driven Insights, Progress Analyti
 - [Installation](#-installation)
 - [Usage](#-usage)
 - [How to Contribute](#how-to-contribute)
-- [Screenshots](#-screenshots)
 - [Author](#-author)
 - [License](#-license)
 
 ## 🌟 Overview
-Task Tracker is a cutting-edge task management platform that combines AI-powered insights, intelligent task scheduling, and comprehensive progress analytics to help users efficiently manage their workflow and boost productivity. Built with modern web technologies, it provides real-time notifications, personalized task recommendations, and detailed productivity analytics.
 
-### 🎯 Key Highlights
-- **AI-Powered Task Insights** with Gemini AI integration
-- **Smart Task Scheduling** with intelligent priority management
-- **Real-Time Progress Tracking** using advanced analytics
-- **Intelligent Task Recommendations** based on user patterns
-- **Advanced Task Analytics** with behavioral analysis
-- **Task Category Management** with custom organization
-- **Subtask Support** for complex project management
-- **Admin Dashboard** for platform management
-- **User Preference Management** for customized experience
-- **JWT-based Secure Authentication**
+Task Tracker is a feature-rich task management platform that empowers users to manage their workflow effectively. The application combines a clean, intuitive user interface with robust backend infrastructure to provide a seamless task management experience. Users can create, organize, filter, search, and export their tasks with ease, while administrators have full control over the platform.
+
+### 🎯 Key Features
+
+- **Task CRUD Operations** - Create, read, update, and delete tasks effortlessly
+- **Advanced Filtering** - Filter tasks by status (All, Pending, Completed)
+- **Real-time Search** - Search tasks with instant results and highlighting
+- **Bulk Operations** - Select multiple tasks and perform batch actions
+- **Task Statistics** - View real-time statistics dashboard with progress tracking
+- **Data Import/Export** - Import and export tasks in JSON, CSV, or text formats
+- **Keyboard Shortcuts** - Productivity shortcuts for common operations
+- **Offline Support** - LocalStorage caching for offline functionality
+- **Responsive Design** - Mobile-friendly interface for all devices
+- **Error Handling** - Comprehensive error recovery and user feedback
 
 ## ✨ Features
 
-### 🔐 Authentication & User Management
-- JWT-based secure authentication with bcryptjs encryption
-- User registration and login with validation
-- Profile customization (username, bio, preferences)
-- Role-based access control (User/Admin)
-- Secure session management
-- User preference storage and retrieval
-
 ### 📋 Task Management
-- **Create & Organize**: Create tasks with titles, descriptions, and due dates
-- **Priority Levels**: Assign priority (Low, Medium, High, Urgent) to tasks
-- **Task Categories**: Organize tasks by custom categories
-- **Subtask Support**: Break down complex tasks into smaller subtasks
-- **Status Tracking**: Track task progress (To Do, In Progress, Completed)
-- **Due Date Management**: Set and manage task deadlines
-- **Task Tags**: Add custom tags for better organization
-- **Recurring Tasks**: Set up tasks that repeat automatically
 
-### 🤖 AI-Powered Features
-- **Gemini AI Integration**: Get AI-powered task suggestions and insights
-- **Smart Recommendations**: AI recommends tasks based on your patterns
-- **Task Optimization**: AI suggests better task organization
-- **Deadline Predictions**: AI predicts optimal completion timelines
-- **Priority Assistance**: AI helps determine task priorities
-- **Productivity Insights**: AI analyzes your productivity patterns
+**Create & Organize Tasks**
+- Add new tasks with a simple, intuitive input field
+- Organize tasks with custom titles and descriptions
+- Track task creation and modification timestamps
+- Immediate feedback on task addition with success notifications
 
-### 📊 Task Analytics & History
-- **Task History**: Track all past and completed tasks
-- **Performance Statistics**: Analyze your productivity metrics
-- **Completion Rates**: Monitor task completion statistics
-- **Time Tracking**: Track time spent on tasks
-- **Detailed Reports**: Comprehensive task analytics
-- **Progress Visualization**: Visual representation of your productivity growth
-- **Productivity Trends**: Analyze productivity patterns over time
+**Status Tracking**
+- Track task progress with two status states: **Pending** and **Completed**
+- Toggle task status with a single click using status checkboxes
+- Visual status badges to quickly identify task states
+- Automatic status updates reflected in statistics
 
-### 🔔 Notifications & Reminders
-- **Due Date Alerts**: Get notified before task deadlines
-- **Real-Time Updates**: Live notification system
-- **Task Reminders**: Customizable reminder notifications
-- **Priority Alerts**: Alerts for high-priority tasks
-- **Completion Notifications**: Celebrate completed tasks
-- **Event Tracking**: Track important task events
+**Task Filtering**
+- Filter tasks by status: All, Pending, or Completed tasks
+- Active filter indicator showing current filter state
+- Smooth transitions when switching between filter views
+- Batch selection automatically clears when changing filters
 
-### ⚙️ Admin Panel
-- **User Management**: Monitor and manage registered users
-- **Task Management**: View and manage all platform tasks
-- **Category Management**: Create and manage task categories
-- **Admin Tools**: Promote users to admin status
-- **Content Control**: Full control over task database
-- **Platform Analytics**: Monitor platform usage and metrics
-- **System Settings**: Configure platform settings
+### 🔍 Search & Organization
+
+**Real-time Search**
+- Instant search filtering as you type task titles
+- Search term highlighting in results for better visibility
+- Search result counter showing matches
+- Quick clear button to reset search state
+- Keyboard shortcut (Ctrl+S or /) to focus search bar
+
+**Sorting Options**
+- **Newest First** - Sort by creation date (newest to oldest)
+- **Oldest First** - Sort by creation date (oldest to newest)
+- **A to Z** - Alphabetical ascending order
+- **Z to A** - Alphabetical descending order
+- **Completed First** - Group completed tasks at top
+- **Pending First** - Group pending tasks at top
+
+### 📊 Statistics Dashboard
+
+**Real-time Statistics**
+- **Total Tasks** - Count of all tasks in the system
+- **Pending Tasks** - Count of tasks with pending status
+- **Completed Tasks** - Count of successfully completed tasks
+- **Progress Percentage** - Completion rate calculated as (Completed / Total) × 100
+
+**Progress Visualization**
+- Animated progress bar showing completion percentage
+- Color-coded progress indicator based on completion rate
+- Smooth number animations when statistics update
+- Real-time updates reflecting task changes
+
+### ✅ Bulk Operations
+
+**Multiple Task Selection**
+- Individual task checkboxes for selective operations
+- "Select All" checkbox to quickly select all visible tasks
+- Visual ring highlight for selected tasks
+- Selection counter showing number of selected items
+
+**Batch Actions**
+- **Mark as Completed** - Complete multiple tasks at once
+- **Mark as Pending** - Revert multiple tasks back to pending state
+- **Delete Multiple** - Remove multiple tasks simultaneously
+- Confirmation dialogs for destructive operations
+
+### 💾 Data Management
+
+**Export Tasks**
+- **JSON Export** - Export tasks as JSON file for backup and re-import
+- **CSV Export** - Export to CSV for use in spreadsheet applications (Excel, Google Sheets)
+- **Text Export** - Export as plain text for simple viewing or printing
+- Auto-generated filenames with timestamps for organization
+
+**Import Tasks**
+- Import from JSON files previously exported
+- Import from CSV files with automatic format validation
+- Merge option to combine imported tasks with existing data
+- Replace option to overwrite existing tasks completely
+- Validation to ensure imported data integrity
+
+### ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action | Description |
+|----------|--------|-------------|
+| `Ctrl+N` | New Task | Focus input field for quick task creation |
+| `Ctrl+S` or `/` | Search | Focus search input field |
+| `Ctrl+A` | Select All | Toggle select all tasks |
+| `Delete` | Delete Selected | Remove all selected tasks |
+| `Escape` | Clear | Clear selection or search |
+| `Alt+1` | Show All | Filter to show all tasks |
+| `Alt+2` | Show Pending | Filter to show pending tasks only |
+| `Alt+3` | Show Completed | Filter to show completed tasks only |
+| `Ctrl+E` | Export | Open export options menu |
+
+### 🌐 Offline Support
+
+**LocalStorage Caching**
+- Automatic local storage of tasks for offline access
+- Seamless sync when connection is restored
+- Fallback to cached data if API is unavailable
+- User notification when working in offline mode
+
+**Online/Offline Detection**
+- Real-time connection status monitoring
+- Automatic task sync when going back online
+- Clear visual indicators of offline status
+- Warning messages about offline limitations
+
+### ♿ Accessibility
+
+**Screen Reader Support**
+- ARIA labels on all interactive elements
+- Live regions for announcing task changes
+- Semantic HTML structure for better navigation
+- Keyboard navigation support throughout the application
+
+**Focus Management**
+- Visible focus indicators on all interactive elements
+- Proper tab order for keyboard navigation
+- Focus restoration after modal interactions
+- Skip to main content functionality
+
+### 🎨 User Interface
+
+**Responsive Design**
+- Mobile-first responsive layout
+- Optimized for mobile, tablet, and desktop views
+- Touch-friendly button sizes and spacing
+- Adaptive grid layouts for different screen sizes
+
+**Visual Feedback**
+- Loading spinners during data operations
+- Toast notifications for user actions (success, error, warning)
+- Animated transitions between states
+- Empty state message when no tasks exist
+
+**Dark-Friendly Design**
+- Soft color palette suitable for extended use
+- High contrast for readability
+- Smooth animations that don't strain eyes
+- Clear visual hierarchy
 
 ## ⚙️ Tech Stack
 
-### Frontend
-- **Framework**: React 19.x 🛠️
-- **Build Tool**: Vite ⚙️
-- **Styling**: Tailwind CSS v4 🎨
-- **Routing**: React Router DOM 🗺️
-- **HTTP Client**: Axios 🌐
-- **Icons**: Lucide React 🌟
-- **Form Handling**: React Hook Form (optional) 📋
-- **Charts**: Chart.js or Recharts 📊
+### Frontend Architecture
 
-### Backend
-- **Runtime**: Node.js 18+ 🟢
-- **Framework**: Express.js 5.x 🚀
-- **Database**: MongoDB + Mongoose 🗄️
-- **Authentication**: JWT (jsonwebtoken) 🔑
-- **AI Integration**: Google Generative AI (Gemini) 🤖
-- **Validation**: Express Validator 🔍
-- **Security**: Bcryptjs, CORS 🔒
-- **Task Scheduling**: Node-cron or Bull (optional) ⏰
+**React 19.x** 🛠️
+- Modern JavaScript library for building user interfaces
+- Component-based architecture for reusable UI elements
+- Functional components with hooks for state management
+- Efficient re-rendering through React's virtual DOM
 
-### DevOps & Deployment
-- **Frontend**: Vercel 🌐
-- **Backend**: Render 🚀
-- **Database**: MongoDB Atlas 🗄️
-- **Version Control**: Git + GitHub 🧑‍💻
+**Vite** ⚙️
+- Lightning-fast build tool and development server
+- Native ES modules support for instant HMR (Hot Module Replacement)
+- Optimized production builds with code splitting
+- Minimal configuration required for quick setup
+
+**Vanilla JavaScript Modules**
+- Modular utility files for specific functionality
+- `api.js` - Axios HTTP client configuration and API calls
+- `storage.js` - LocalStorage wrapper for persistent data
+- `validator.js` - Input validation and duplicate checking
+- `search.js` - Search functionality and term highlighting
+- `sort.js` - Task sorting logic for multiple sort options
+- `stats.js` - Statistics calculation and formatting
+- `toast.js` - Toast notification system
+- `errorHandler.js` - Comprehensive error handling and logging
+- `performance.js` - Performance optimization utilities (debounce, throttle)
+- `accessibility.js` - Accessibility features and WCAG compliance
+- `keyboard.js` - Keyboard shortcut management
+- `exportImport.js` - Data import/export functionality
+- `skeleton.js` - Skeleton loading states for better UX
+- `bulkOperations.js` - Bulk operation management and validation
+
+**Tailwind CSS v4** 🎨
+- Utility-first CSS framework for rapid UI development
+- Pre-configured color palette and responsive breakpoints
+- Custom animations and transitions
+- Built-in dark mode support (optional implementation)
+
+**Axios** 🌐
+- Promise-based HTTP client for API communication
+- Automatic request/response interceptors
+- Error handling and timeout management
+- Request cancellation support
+
+### Backend Architecture
+
+**Node.js 18+** 🟢
+- JavaScript runtime for server-side development
+- Event-driven, non-blocking I/O model
+- NPM ecosystem for package management
+- Full compatibility with modern JavaScript features
+
+**Express.js 5.x** 🚀
+- Lightweight web application framework
+- Middleware support for request processing
+- Routing system for API endpoints
+- Error handling and middleware chain management
+
+**MongoDB + Mongoose** 🗄️
+- MongoDB Atlas cloud database for data persistence
+- Mongoose ODM for schema validation and data modeling
+- Flexible schema design for task documents
+- Automatic indexing for optimized queries
+- Transaction support for data integrity
+
+**JWT Authentication** 🔑
+- `jsonwebtoken` library for token generation and verification
+- Stateless authentication mechanism
+- Token-based user session management
+- Secure user verification on protected routes
+
+**Bcryptjs** 🔒
+- Password hashing with salt rounds
+- Secure password storage and verification
+- Protection against rainbow table attacks
+- Industry-standard cryptographic hashing
+
+**Express Validator** 🔍
+- Input validation and sanitization
+- Custom validation rules
+- Error message formatting
+- Middleware integration for route protection
+
+**CORS** 🔐
+- Cross-Origin Resource Sharing configuration
+- Secure API access from different domains
+- Configuration for production and development environments
+- Request method and header restrictions
+
+**Google Generative AI (Gemini)** 🤖
+- AI-powered task suggestions and insights (future feature)
+- Natural language processing for task understanding
+- Smart recommendations based on user patterns
+- Integration ready for advanced features
+
+### Development Tools
+
+**Version Control** 🧑‍💻
+- Git for distributed version control
+- GitHub for repository hosting and collaboration
+- Branch management for feature development
+- Commit history for tracking changes
+
+**Environment Management**
+- `.env` file for sensitive configuration
+- Environment variables for API keys and database URLs
+- Separate development and production configurations
+- Safe credential management without exposing secrets
 
 ## 📁 Project Structure
+
 ```
 Task-Tracker/
 ├── backend/
 │   ├── config/
-│   │   └── db.js                          # MongoDB connection
+│   │   └── database.js                    # MongoDB connection setup
 │   ├── controllers/
-│   │   ├── authController.js              # Authentication logic
-│   │   ├── userController.js              # User management
-│   │   ├── taskController.js              # Task CRUD operations
-│   │   ├── subtaskController.js           # Subtask management
-│   │   ├── categoryController.js          # Category management
-│   │   ├── aiInsightsController.js        # AI insights handling
-│   │   ├── analyticsController.js         # Analytics and statistics
-│   │   ├── adminController.js             # Admin operations
-│   │   ├── notificationController.js      # Notification handling
-│   │   └── preferencesController.js       # User preferences
-│   ├── middleware/
-│   │   └── authMiddleware.js              # JWT verification
+│   │   └── taskController.js              # Task CRUD logic
 │   ├── models/
-│   │   ├── User.js                        # User schema
-│   │   ├── Task.js                        # Task schema
-│   │   ├── Subtask.js                     # Subtask schema
-│   │   ├── Category.js                    # Category schema
-│   │   ├── Notification.js                # Notification schema
-│   │   └── UserPreference.js              # User preference schema
+│   │   └── Task.js                        # Task schema definition
 │   ├── routes/
-│   │   ├── authRoutes.js                  # /api/auth/*
-│   │   ├── userRoutes.js                  # /api/user/*
-│   │   ├── taskRoutes.js                  # /api/tasks/*
-│   │   ├── subtaskRoutes.js               # /api/subtasks/*
-│   │   ├── categoryRoutes.js              # /api/categories/*
-│   │   ├── aiInsightsRoutes.js            # /api/ai-insights/*
-│   │   ├── analyticsRoutes.js             # /api/analytics/*
-│   │   ├── adminRoutes.js                 # /api/admin/*
-│   │   ├── notificationRoutes.js          # /api/notifications/*
-│   │   └── preferencesRoutes.js           # /api/preferences/*
-│   ├── services/
-│   │   ├── aiService.js                   # Google Generative AI integration
-│   │   ├── taskScheduler.js               # Task scheduling service
-│   │   └── notificationService.js         # Notification processing
-│   ├── utils/
-│   │   └── generateToken.js               # JWT token generation
+│   │   └── taskRoutes.js                  # API routes for tasks
 │   ├── .env                               # Environment variables
-│   ├── .env.example                       # Example environment file
-│   ├── server.js                          # Entry point
-│   ├── seedCategories.js                  # Sample categories seeding
-│   ├── seedTasks.js                       # Sample tasks seeding
-│   ├── makeAdmin.js                       # Admin user creation script
-│   └── package.json
+│   ├── server.js                          # Express server entry point
+│   └── package.json                       # Backend dependencies
 │
 ├── frontend/
 │   ├── public/                            # Static assets
 │   ├── src/
-│   │   ├── components/
-│   │   │   ├── ProtectedRoute.jsx         # Protected route wrapper
-│   │   │   ├── TaskCard.jsx               # Task card component
-│   │   │   ├── TaskForm.jsx               # Task creation form
-│   │   │   ├── TaskFilter.jsx             # Task filtering component
-│   │   │   └── TaskModal.jsx              # Task detail modal
-│   │   ├── config/
-│   │   │   └── api.js                     # Axios API configuration
-│   │   ├── context/
-│   │   │   └── AuthContext.jsx            # Authentication context
-│   │   ├── pages/
-│   │   │   ├── Landing.jsx                # Landing page
-│   │   │   ├── Login.jsx                  # Login page
-│   │   │   ├── Register.jsx               # Registration page
-│   │   │   ├── ProfileSetup.jsx           # Profile setup page
-│   │   │   ├── Dashboard.jsx              # Main dashboard
-│   │   │   ├── Tasks.jsx                  # Tasks management page
-│   │   │   ├── TaskDetail.jsx             # Individual task detail
-│   │   │   ├── Categories.jsx             # Category management
-│   │   │   ├── Analytics.jsx              # Analytics & statistics
-│   │   │   ├── AIInsights.jsx             # AI insights page
-│   │   │   ├── Settings.jsx               # User settings page
-│   │   │   └── admin/
-│   │   │       ├── AdminDashboard.jsx     # Admin dashboard
-│   │   │       ├── UserManagement.jsx     # Manage users
-│   │   │       └── TaskManagement.jsx     # Manage all tasks
-│   │   ├── App.jsx                        # Root component
-│   │   ├── main.jsx                       # Entry point
-│   │   └── index.css                      # Tailwind imports
-│   ├── .env                               # Environment variables
-│   ├── vite.config.js                     # Vite configuration
-│   ├── eslint.config.js                   # ESLint configuration
+│   │   ├── index.css                      # Tailwind CSS imports
+│   │   ├── main.jsx                       # React entry point
+│   │   └── App.jsx                        # Root React component
+│   ├── api.js                             # Axios configuration
+│   ├── errorHandler.js                    # Error handling utilities
+│   ├── performance.js                     # Performance optimization
+│   ├── accessibility.js                   # Accessibility features
+│   ├── skeleton.js                        # Loading skeleton templates
+│   ├── toast.js                           # Notification system
+│   ├── validator.js                       # Input validation
+│   ├── keyboard.js                        # Keyboard shortcuts
+│   ├── exportImport.js                    # Data import/export
+│   ├── sort.js                            # Sorting utilities
+│   ├── search.js                          # Search functionality
+│   ├── storage.js                         # LocalStorage wrapper
+│   ├── stats.js                           # Statistics calculation
+│   ├── bulkOperations.js                  # Bulk action management
+│   ├── main.js                            # Main application logic
 │   ├── index.html                         # HTML template
-│   └── package.json
+│   ├── vite.config.js                     # Vite configuration
+│   ├── package.json                       # Frontend dependencies
+│   └── .env                               # Frontend environment variables
 │
-├── .gitignore
-├── README.md
-└── LICENSE
+├── .gitignore                             # Git ignore rules
+├── README.md                              # Project documentation
+└── LICENSE                                # MIT license file
 ```
 
 ## 🚀 Installation
 
 ### Prerequisites
-- Node.js 18+ and npm/yarn
-- MongoDB (Local or Atlas)
-- Google Generative AI API Key
-- Git & GitHub
-- Modern web browser
 
-### 1. Clone Repository
+- **Node.js** 18+ (Download from [nodejs.org](https://nodejs.org/))
+- **npm** (comes with Node.js) or **yarn**
+- **MongoDB Account** (Create free account at [MongoDB Atlas](https://www.mongodb.com/))
+- **Git** (Download from [git-scm.com](https://git-scm.com/))
+- **Modern Web Browser** (Chrome, Firefox, Safari, or Edge)
+
+### Step 1: Clone Repository
+
 ```bash
+# Clone the repository
 git clone https://github.com/yourusername/Task-Tracker.git
+
+# Navigate to project directory
 cd Task-Tracker
 ```
 
-### 2. Backend Setup
+### Step 2: Backend Setup
+
 ```bash
+# Navigate to backend directory
 cd backend
+
+# Install dependencies
 npm install
 ```
 
-Create `.env` file in backend:
+**Create `.env` file in backend directory:**
+
 ```env
-# Server
+# Server Configuration
 NODE_ENV=development
 PORT=5000
 
-# Database
-MONGODB_URI=
+# Database Configuration
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/task-tracker
 
 # Authentication
-JWT_SECRET=
+JWT_SECRET=your-super-secret-jwt-key-here
 
-# Google Generative AI
-GEMINI_API_KEY=
-
-# CORS
+# CORS Configuration
 CLIENT_URL=http://localhost:5173
 ```
 
-**Get Google Generative AI API Key:**
-1. Go to [Google AI Studio](https://ai.google.dev/)
-2. Click "Create API Key"
-3. Copy your API key and paste in `.env`
+**Environment Variable Explanation:**
+- `NODE_ENV` - Application environment (development/production)
+- `PORT` - Server port number
+- `MONGODB_URI` - MongoDB connection string with authentication
+- `JWT_SECRET` - Secret key for JWT token signing (use a strong random string)
+- `CLIENT_URL` - Frontend URL for CORS configuration
 
-Start backend:
+**Start backend server:**
+
 ```bash
 npm run dev
 ```
 
-Backend runs on: `http://localhost:5000`
+Backend server runs on: `http://localhost:5000`
 
-### 3. Seed Categories & Tasks (Optional)
-```bash
-node seedCategories.js
-node seedTasks.js
-```
+### Step 3: Frontend Setup
 
-### 4. Create Admin User (Optional)
 ```bash
-node makeAdmin.js
-```
+# Navigate to frontend directory
+cd ../frontend
 
-### 5. Frontend Setup
-```bash
-cd frontend
+# Install dependencies
 npm install
 ```
 
-Create `.env` file in frontend:
+**Create `.env` file in frontend directory:**
+
 ```env
 VITE_API_URL=http://localhost:5000/api
 VITE_SOCKET_URL=http://localhost:5000
 ```
 
-Start frontend:
+**Environment Variable Explanation:**
+- `VITE_API_URL` - Backend API base URL for HTTP requests
+- `VITE_SOCKET_URL` - Backend socket URL (for future real-time features)
+
+**Start frontend development server:**
+
 ```bash
 npm run dev
 ```
 
 Frontend runs on: `http://localhost:5173`
 
-### 6. Access Application
-Open browser: `http://localhost:5173`
+### Step 4: Access Application
+
+Open your browser and navigate to:
+```
+http://localhost:5173
+```
+
+The application should load with the full task management interface ready to use.
 
 ## 🎮 Usage
 
 ### For Users
-- **Sign Up**: Create a new account with email and password
-- **Profile Setup**: Complete your profile with basic information
-- **Create Tasks**: Add new tasks with titles, descriptions, and due dates
-- **Organize**: Use categories and tags to organize your tasks
-- **Track Progress**: Monitor task completion and productivity
-- **Get AI Insights**: Receive AI-powered recommendations and insights
-- **View Analytics**: Check your productivity analytics and reports
-- **Manage Reminders**: Set up notifications and reminders for tasks
 
-### For Admins
-- **Access Admin Dashboard**: Navigate to `/admin` (requires admin role)
-- **Manage Users**: View, update, or manage user accounts
-- **Manage Tasks**: View and monitor all platform tasks
-- **Manage Categories**: Create and organize task categories
-- **View Statistics**: Monitor platform usage and user activity
-- **Make New Admins**: Promote users to admin status
-- **System Control**: Full control over platform content and settings
+**Getting Started**
+1. **Create Task** - Type task title in input field and click "Add Task" or press Enter
+2. **View Tasks** - All tasks appear in the task list below automatically
+3. **Mark Complete** - Click checkbox next to task or status badge to toggle completion
+4. **Edit Task** - Click pencil icon to edit task title inline
+5. **Delete Task** - Click trash icon to remove single task
+
+**Organization Features**
+1. **Filter Tasks** - Click filter buttons to show All, Pending, or Completed tasks
+2. **Search Tasks** - Use search bar to find tasks by title (Ctrl+S or /)
+3. **Sort Tasks** - Select sort option to organize by date, alphabetically, or status
+4. **Bulk Select** - Check individual tasks or use "Select All" for batch operations
+5. **Bulk Actions** - Perform Mark Complete, Mark Pending, or Delete on multiple tasks
+
+**Data Management**
+1. **Export Tasks** - Click Export button to download tasks as JSON, CSV, or text
+2. **Import Tasks** - Click Import button to upload previously exported task files
+3. **Offline Usage** - Tasks automatically sync to local storage for offline access
+4. **View Statistics** - Dashboard shows Total, Pending, Completed, and Progress percentage
+
+**Productivity Tips**
+- Use keyboard shortcuts for faster navigation (see Keyboard Shortcuts section)
+- Leverage bulk operations for quick task management
+- Regularly export tasks for backup purposes
+- Monitor progress percentage in statistics dashboard
+
+### For Developers
+
+**API Integration**
+- Backend API runs on port 5000
+- RESTful endpoints for task CRUD operations
+- JWT authentication for protected routes
+- Axios configured for automatic error handling
+
+**Customization**
+- Modify Tailwind CSS classes for custom styling
+- Add new validation rules in `validator.js`
+- Extend keyboard shortcuts in `keyboard.js`
+- Implement additional sorting options in `sort.js`
 
 ## How to Contribute
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m "Add amazing feature"`
-4. Push to branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
 
-## 📸 Screenshots
-### Landing Page
-[Add landing page screenshots here]
+We welcome contributions to improve Task Tracker! Here's how to contribute:
 
-### Dashboard & Task Management
-[Add dashboard screenshots here]
+```bash
+# 1. Fork the repository on GitHub
 
-### Analytics & Insights
-[Add analytics screenshots here]
+# 2. Clone your fork locally
+git clone https://github.com/your-username/Task-Tracker.git
+cd Task-Tracker
 
-### Admin Panel
-[Add admin panel screenshots here]
+# 3. Create a feature branch
+git checkout -b feature/amazing-feature
+
+# 4. Make your changes
+# Edit files as needed for your feature
+
+# 5. Commit your changes
+git commit -m "Add amazing feature: brief description"
+
+# 6. Push to your branch
+git push origin feature/amazing-feature
+
+# 7. Open a Pull Request on GitHub
+# Provide clear description of changes and improvements
+```
+
+### Contribution Guidelines
+
+- Follow existing code style and conventions
+- Write meaningful commit messages
+- Test your changes before submitting
+- Update documentation for new features
+- Ensure no sensitive information in commits
 
 ## 👤 Author
-Designed and Developed with 💖 by **Your Name**
+
+**Designed and Developed with 💖 by Arpita Singh**
 
 ### 🔗 Connect with me:
-- 📧 [Email](mailto:youremail@example.com)
-- 💼 [LinkedIn](https://linkedin.com/in/yourprofile)
-- 🐙 [GitHub](https://github.com/yourusername)
 
-📬 Feel free to reach out for questions, suggestions, or collaboration!
+- **📧 Email** - [singharpita.05march@gmail.com](mailto:singharpita.05march@gmail.com)
+- **💼 LinkedIn** - [singharpitaa05](https://www.linkedin.com/in/singharpitaa05)
+- **🐙 GitHub** - [singharpitaa05](https://github.com/singharpitaa05)
+
+📬 Feel free to reach out for questions, suggestions, or collaboration opportunities!
 
 ## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for complete details.
+
+### What the MIT License Means:
+- ✅ You can use this project for personal or commercial purposes
+- ✅ You can modify and distribute the code
+- ✅ You can include it in proprietary applications
+- ⚠️ The license and copyright notice must be included
+- ❌ We provide no warranty or liability
+
+---
+
+**Made with ❤️ for task management enthusiasts**
