@@ -123,19 +123,6 @@ Task Tracker is a feature-rich task management platform that empowers users to m
 - Replace option to overwrite existing tasks completely
 - Validation to ensure imported data integrity
 
-### ⌨️ Keyboard Shortcuts
-
-| Shortcut | Action | Description |
-|----------|--------|-------------|
-| `Ctrl+N` | New Task | Focus input field for quick task creation |
-| `Ctrl+S` or `/` | Search | Focus search input field |
-| `Ctrl+A` | Select All | Toggle select all tasks |
-| `Delete` | Delete Selected | Remove all selected tasks |
-| `Escape` | Clear | Clear selection or search |
-| `Alt+1` | Show All | Filter to show all tasks |
-| `Alt+2` | Show Pending | Filter to show pending tasks only |
-| `Alt+3` | Show Completed | Filter to show completed tasks only |
-| `Ctrl+E` | Export | Open export options menu |
 
 ### 🌐 Offline Support
 
@@ -178,12 +165,6 @@ Task Tracker is a feature-rich task management platform that empowers users to m
 - Toast notifications for user actions (success, error, warning)
 - Animated transitions between states
 - Empty state message when no tasks exist
-
-**Dark-Friendly Design**
-- Soft color palette suitable for extended use
-- High contrast for readability
-- Smooth animations that don't strain eyes
-- Clear visual hierarchy
 
 ## ⚙️ Tech Stack
 
@@ -251,18 +232,6 @@ Task Tracker is a feature-rich task management platform that empowers users to m
 - Automatic indexing for optimized queries
 - Transaction support for data integrity
 
-**JWT Authentication** 🔑
-- `jsonwebtoken` library for token generation and verification
-- Stateless authentication mechanism
-- Token-based user session management
-- Secure user verification on protected routes
-
-**Bcryptjs** 🔒
-- Password hashing with salt rounds
-- Secure password storage and verification
-- Protection against rainbow table attacks
-- Industry-standard cryptographic hashing
-
 **Express Validator** 🔍
 - Input validation and sanitization
 - Custom validation rules
@@ -274,12 +243,6 @@ Task Tracker is a feature-rich task management platform that empowers users to m
 - Secure API access from different domains
 - Configuration for production and development environments
 - Request method and header restrictions
-
-**Google Generative AI (Gemini)** 🤖
-- AI-powered task suggestions and insights (future feature)
-- Natural language processing for task understanding
-- Smart recommendations based on user patterns
-- Integration ready for advanced features
 
 ### Development Tools
 
@@ -351,7 +314,6 @@ Task-Tracker/
 - **npm** (comes with Node.js) or **yarn**
 - **MongoDB Account** (Create free account at [MongoDB Atlas](https://www.mongodb.com/))
 - **Git** (Download from [git-scm.com](https://git-scm.com/))
-- **Modern Web Browser** (Chrome, Firefox, Safari, or Edge)
 
 ### Step 1: Clone Repository
 
@@ -381,21 +343,12 @@ NODE_ENV=development
 PORT=5000
 
 # Database Configuration
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/task-tracker
+MONGODB_URI=
 
-# Authentication
-JWT_SECRET=your-super-secret-jwt-key-here
 
 # CORS Configuration
 CLIENT_URL=http://localhost:5173
 ```
-
-**Environment Variable Explanation:**
-- `NODE_ENV` - Application environment (development/production)
-- `PORT` - Server port number
-- `MONGODB_URI` - MongoDB connection string with authentication
-- `JWT_SECRET` - Secret key for JWT token signing (use a strong random string)
-- `CLIENT_URL` - Frontend URL for CORS configuration
 
 **Start backend server:**
 
@@ -421,10 +374,6 @@ npm install
 VITE_API_URL=http://localhost:5000/api
 VITE_SOCKET_URL=http://localhost:5000
 ```
-
-**Environment Variable Explanation:**
-- `VITE_API_URL` - Backend API base URL for HTTP requests
-- `VITE_SOCKET_URL` - Backend socket URL (for future real-time features)
 
 **Start frontend development server:**
 
@@ -537,14 +486,3 @@ git push origin feature/amazing-feature
 ## 📄 License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for complete details.
-
-### What the MIT License Means:
-- ✅ You can use this project for personal or commercial purposes
-- ✅ You can modify and distribute the code
-- ✅ You can include it in proprietary applications
-- ⚠️ The license and copyright notice must be included
-- ❌ We provide no warranty or liability
-
----
-
-**Made with ❤️ for task management enthusiasts**
