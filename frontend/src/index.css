@@ -1,1 +1,81 @@
 @import "tailwindcss";
+
+/* Animated soft gradient + moving blobs background */
+.animated-bg{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(99,102,241,0.06), rgba(139,92,246,0.05), rgba(79,70,229,0.06));
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease-in-out infinite;
+  overflow: hidden;
+}
+
+/* two soft blurred blobs for depth */
+.animated-bg::before,
+.animated-bg::after{
+  content: "";
+  position: absolute;
+  filter: blur(80px);
+  opacity: 0.7;
+  mix-blend-mode: screen;
+  transform: translate3d(0,0,0);
+}
+
+.animated-bg::before{
+  width: 48vmax;
+  height: 48vmax;
+  left: -10vmin;
+  top: -20vmin;
+  background: radial-gradient(circle at 30% 30%, rgba(79,70,229,0.30), rgba(139,92,246,0.12) 40%, transparent 60%);
+  animation: blobMove 20s linear infinite;
+}
+
+.animated-bg::after{
+  width: 36vmax;
+  height: 36vmax;
+  right: -5vmin;
+  bottom: -15vmin;
+  background: radial-gradient(circle at 70% 70%, rgba(236,72,153,0.20), rgba(139,92,246,0.10) 40%, transparent 60%);
+  animation: blobMoveAlt 26s linear infinite;
+}
+
+/* subtle floating diagonal streaks */
+.animated-bg .streaks{
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.02) 0 10%, transparent 10%),
+                    linear-gradient(135deg, rgba(255,255,255,0.02) 0 5%, transparent 5%);
+  background-size: 40px 40px, 80px 80px;
+  opacity: 0.6;
+  mix-blend-mode: overlay;
+  animation: drift 40s linear infinite;
+}
+
+/* Keyframes */
+@keyframes gradientShift{
+  0%{ background-position: 0% 50%; }
+  50%{ background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
+
+@keyframes blobMove{
+  0%{ transform: translate3d(0,0,0) scale(1); }
+  50%{ transform: translate3d(6vmin,8vmin,0) scale(1.05); }
+  100%{ transform: translate3d(0,0,0) scale(1); }
+}
+
+@keyframes blobMoveAlt{
+  0%{ transform: translate3d(0,0,0) scale(1); }
+  50%{ transform: translate3d(-8vmin,-6vmin,0) scale(0.95); }
+  100%{ transform: translate3d(0,0,0) scale(1); }
+}
+
+@keyframes drift{
+  0%{ background-position: 0 0, 0 0; }
+  100%{ background-position: 1000px 1000px, -1000px -1000px; }
+}
+
+/* ensure page content sits above background */
+html, body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
