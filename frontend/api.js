@@ -3,7 +3,7 @@
 // frontend/api.js
 
 // Base API URL
-const API_BASE_URL = 'http://localhost:5000/api/tasks';
+const API_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/tasks`;
 
 // API Service object with all task-related functions
 const api = {
