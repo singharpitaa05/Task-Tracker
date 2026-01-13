@@ -2,7 +2,7 @@
 
 A comprehensive task management application built with modern web technologies, designed to help users efficiently organize, track, and complete their daily tasks with advanced features like real-time search, bulk operations, and data export/import capabilities.
 
-📖 [Documentation](#documentation) | 🚀 [Quick Start](#installation) | 🎯 [Features](#-features) | 💻 [Tech Stack](#-tech-stack)
+📖 [Documentation](#-project-structure) | 🚀 [Quick Start](#-installation) | 🎯 [Features](#-features) | 💻 [Tech Stack](#-tech-stack)
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=node.js)](https://nodejs.org/)
