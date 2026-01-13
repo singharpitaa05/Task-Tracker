@@ -16,7 +16,7 @@ A comprehensive task management application built with modern web technologies, 
 
 - [Overview](#-overview)
 - [Features](#-features)
-- [Tech Stack](#-tech-stack)
+- [Tech Stack](#️-tech-stack)
 - [Project Structure](#-project-structure)
 - [Installation](#-installation)
 - [Usage](#-usage)
